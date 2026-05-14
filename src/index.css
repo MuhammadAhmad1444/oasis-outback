@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-cream text-ink antialiased; font-family: 'DM Sans', system-ui, sans-serif; }
+}
+
+@layer components {
+  .section-label { @apply text-gold font-sans text-[10px] font-semibold tracking-[0.2em] uppercase; }
+
+  .legal-content h2  { @apply font-serif font-normal text-xl text-ink mt-10 mb-3 pb-2; border-bottom: 1px solid #C9A84C; }
+  .legal-content h3  { @apply text-sm font-semibold text-ink mt-6 mb-2; }
+  .legal-content p   { @apply text-muted text-sm leading-7 mb-4; }
+  .legal-content ul  { @apply list-disc ml-5 space-y-1.5 text-sm text-muted leading-7 mb-4; }
+  .legal-content ol  { @apply list-decimal ml-5 space-y-1.5 text-sm text-muted leading-7 mb-4; }
+  .legal-content a   { @apply text-gold hover:underline; }
+  .legal-content strong { @apply font-semibold text-ink; }
+  .legal-content .notice-box { @apply bg-cream-dark border-l-4 border-gold rounded-r-lg p-5 text-sm text-ink mb-6; }
+}
