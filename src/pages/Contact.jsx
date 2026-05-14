@@ -3,54 +3,113 @@ import { MapPin, Mail, Phone, Clock, CheckCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const details = [
-  {icon:MapPin, title:'Registered Office', content:<address className="not-italic font-sans text-sm text-muted leading-relaxed mt-1">Office 1307, 60 Tottenham Court Road<br />Fitzrovia, London, W1T 2EW<br />United Kingdom</address>},
-  {icon:Mail,   title:'Email',             content:<a href="mailto:support@chiccub.com" className="font-sans text-sm text-gold hover:underline mt-1 block">support@chiccub.com</a>},
-  {icon:Phone,  title:'Telephone',         content:<a href="tel:+442079460958" className="font-sans text-sm text-muted hover:text-gold transition-colors mt-1 block">+44 20 7946 0958</a>},
-  {icon:Clock,  title:'Business Hours',    content:<p className="font-sans text-sm text-muted leading-relaxed mt-1">Monday – Friday: 09:00 – 18:00 GMT<br />Saturday: 10:00 – 14:00 GMT</p>},
+  {
+    icon: MapPin,
+    title: 'Registered Office',
+    content: (
+      <address className="not-italic font-sans text-sm text-warm leading-relaxed mt-1.5">
+        Office 1307, 60 Tottenham Court Road<br />
+        Fitzrovia, London, W1T 2EW<br />
+        United Kingdom
+      </address>
+    ),
+  },
+  {
+    icon: Mail,
+    title: 'Email',
+    content: (
+      <a href="mailto:support@chiccub.com" className="font-sans text-sm text-gold hover:underline mt-1.5 block">
+        support@chiccub.com
+      </a>
+    ),
+  },
+  {
+    icon: Phone,
+    title: 'Telephone',
+    content: (
+      <a href="tel:+442079460958" className="font-sans text-sm text-warm hover:text-cream transition-colors duration-200 mt-1.5 block">
+        +44 20 7946 0958
+      </a>
+    ),
+  },
+  {
+    icon: Clock,
+    title: 'Business Hours',
+    content: (
+      <p className="font-sans text-sm text-warm leading-relaxed mt-1.5">
+        Monday – Friday: 09:00 – 18:00 GMT<br />
+        Saturday: 10:00 – 14:00 GMT
+      </p>
+    ),
+  },
+]
+
+const subjects = [
+  'IT Consultancy Enquiry',
+  'Retail / Product Enquiry',
+  'Partnership Opportunity',
+  'Order Support',
+  'General Enquiry',
+  'Media / Press',
 ]
 
 export default function Contact() {
-  const [form, setForm]           = useState({name:'',email:'',company:'',subject:'',message:''})
+  const [form, setForm]           = useState({ name: '', email: '', company: '', subject: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading]     = useState(false)
-  const set = f => e => setForm(p => ({...p, [f]: e.target.value}))
-  const handleSubmit = e => { e.preventDefault(); setLoading(true); setTimeout(() => { setLoading(false); setSubmitted(true) }, 800) }
-  const inp = 'w-full bg-transparent border-0 border-b border-border font-sans text-sm text-ink placeholder-muted/50 py-2.5 focus:outline-none focus:border-ink transition-colors rounded-none'
+
+  const set = field => e => setForm(p => ({ ...p, [field]: e.target.value }))
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    setLoading(true)
+    setTimeout(() => { setLoading(false); setSubmitted(true) }, 800)
+  }
+
+  const inputClass = 'w-full bg-transparent border-0 border-b font-sans text-sm text-cream placeholder-muted/40 py-2.5 focus:outline-none transition-colors rounded-none'
+  const inputStyle = { borderBottomColor: '#252525' }
+  const inputFocusStyle = { borderBottomColor: '#D4A847' }
 
   return (
-    <div className="bg-cream">
+    <div className="bg-bg">
 
       {/* Header */}
-      <section className="py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <span className="section-label mb-4 block">Contact</span>
-          <h1 className="font-serif font-normal text-4xl lg:text-5xl text-ink mb-5">Get in Touch</h1>
-          <p className="font-sans text-lg text-muted leading-7 max-w-xl">
+      <section className="relative py-24 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold/[0.04] rounded-full blur-[80px] translate-y-1/3 -translate-x-1/3" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
+          <span className="label mb-5 block">Contact</span>
+          <h1 className="font-serif font-light text-5xl lg:text-6xl text-cream mb-6">Get in Touch</h1>
+          <div className="w-10 h-px bg-gold mb-7" />
+          <p className="font-sans text-base text-warm leading-[1.8] max-w-xl">
             Our London-based team is available for consultancy enquiries, retail support, and general correspondence.
           </p>
         </div>
       </section>
 
-      <section className="bg-white border-y border-border py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="grid lg:grid-cols-5 gap-14">
+      <section className="bg-surface border-y border-line py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-5 gap-14 lg:gap-16">
 
             {/* Info panel */}
             <div className="lg:col-span-2">
-              <h2 className="font-serif font-normal text-2xl text-ink mb-8">Contact Information</h2>
-              <div className="space-y-7">
-                {details.map(({icon:Icon,title,content}) => (
+              <h2 className="font-serif font-light text-2xl text-cream mb-9">Contact Information</h2>
+              <div className="space-y-8">
+                {details.map(({ icon: Icon, title, content }) => (
                   <div key={title} className="flex gap-4">
-                    <Icon size={15} className="text-gold flex-shrink-0 mt-0.5" />
+                    <Icon size={14} className="text-gold flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-sans text-[11px] font-semibold text-ink uppercase tracking-wider">{title}</p>
+                      <p className="font-sans text-[10px] font-semibold text-cream uppercase tracking-widest">{title}</p>
                       {content}
                     </div>
                   </div>
                 ))}
               </div>
-              <div className="border-l-4 border-gold bg-cream-dark p-5 mt-10">
-                <p className="font-sans text-xs text-muted leading-relaxed">
+
+              {/* Notice */}
+              <div className="mt-10 p-5 bg-raised" style={{ borderLeft: '3px solid #D4A847' }}>
+                <p className="font-sans text-xs text-warm leading-relaxed">
                   For business partnerships, IT consultancy scoping, or media enquiries, please include your company name and a brief description of your requirements.
                 </p>
               </div>
@@ -59,49 +118,112 @@ export default function Contact() {
             {/* Form */}
             <div className="lg:col-span-3">
               {submitted ? (
-                <div className="text-center py-20">
-                  <CheckCircle size={40} className="text-gold mx-auto mb-5" />
-                  <h3 className="font-serif font-normal text-2xl text-ink mb-2">Message Received</h3>
-                  <p className="font-sans text-sm text-muted">We aim to respond within 1–2 business days.</p>
+                <div className="text-center py-24">
+                  <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-6">
+                    <CheckCircle size={24} className="text-gold" />
+                  </div>
+                  <h3 className="font-serif font-light text-2xl text-cream mb-2">Message Received</h3>
+                  <p className="font-sans text-sm text-warm">We aim to respond within 1–2 business days.</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-7">
-                  <div className="grid sm:grid-cols-2 gap-7">
+                <form onSubmit={handleSubmit} className="space-y-8">
+                  <div className="grid sm:grid-cols-2 gap-8">
                     <div>
-                      <label className="block font-sans text-[11px] font-semibold text-ink uppercase tracking-wider mb-2">Full Name *</label>
-                      <input type="text" required placeholder="Jane Smith" value={form.name} onChange={set('name')} className={inp} />
+                      <label className="block font-sans text-[10px] font-semibold text-cream/70 uppercase tracking-widest mb-2.5">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        placeholder="Jane Smith"
+                        value={form.name}
+                        onChange={set('name')}
+                        className={inputClass}
+                        style={inputStyle}
+                        onFocus={e => e.target.style.borderBottomColor = '#D4A847'}
+                        onBlur={e => e.target.style.borderBottomColor = '#252525'}
+                      />
                     </div>
                     <div>
-                      <label className="block font-sans text-[11px] font-semibold text-ink uppercase tracking-wider mb-2">Email Address *</label>
-                      <input type="email" required placeholder="jane@company.com" value={form.email} onChange={set('email')} className={inp} />
+                      <label className="block font-sans text-[10px] font-semibold text-cream/70 uppercase tracking-widest mb-2.5">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        required
+                        placeholder="jane@company.com"
+                        value={form.email}
+                        onChange={set('email')}
+                        className={inputClass}
+                        style={inputStyle}
+                        onFocus={e => e.target.style.borderBottomColor = '#D4A847'}
+                        onBlur={e => e.target.style.borderBottomColor = '#252525'}
+                      />
                     </div>
                   </div>
+
                   <div>
-                    <label className="block font-sans text-[11px] font-semibold text-ink uppercase tracking-wider mb-2">Company</label>
-                    <input type="text" placeholder="Optional" value={form.company} onChange={set('company')} className={inp} />
+                    <label className="block font-sans text-[10px] font-semibold text-cream/70 uppercase tracking-widest mb-2.5">
+                      Company
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Optional"
+                      value={form.company}
+                      onChange={set('company')}
+                      className={inputClass}
+                      style={inputStyle}
+                      onFocus={e => e.target.style.borderBottomColor = '#D4A847'}
+                      onBlur={e => e.target.style.borderBottomColor = '#252525'}
+                    />
                   </div>
+
                   <div>
-                    <label className="block font-sans text-[11px] font-semibold text-ink uppercase tracking-wider mb-2">Subject *</label>
-                    <select required value={form.subject} onChange={set('subject')} className={inp}>
-                      <option value="">Select a subject</option>
-                      <option>IT Consultancy Enquiry</option>
-                      <option>Retail / Product Enquiry</option>
-                      <option>Partnership Opportunity</option>
-                      <option>Order Support</option>
-                      <option>General Enquiry</option>
-                      <option>Media / Press</option>
+                    <label className="block font-sans text-[10px] font-semibold text-cream/70 uppercase tracking-widest mb-2.5">
+                      Subject *
+                    </label>
+                    <select
+                      required
+                      value={form.subject}
+                      onChange={set('subject')}
+                      className={`${inputClass} cursor-pointer`}
+                      style={{ ...inputStyle, backgroundColor: 'transparent', color: form.subject ? '#F0EAD6' : 'rgba(122,112,96,0.6)' }}
+                      onFocus={e => e.target.style.borderBottomColor = '#D4A847'}
+                      onBlur={e => e.target.style.borderBottomColor = '#252525'}
+                    >
+                      <option value="" style={{ background: '#1A1A1A' }}>Select a subject</option>
+                      {subjects.map(s => (
+                        <option key={s} value={s} style={{ background: '#1A1A1A' }}>{s}</option>
+                      ))}
                     </select>
                   </div>
+
                   <div>
-                    <label className="block font-sans text-[11px] font-semibold text-ink uppercase tracking-wider mb-2">Message *</label>
-                    <textarea required rows={5} placeholder="Please describe your enquiry in detail..." value={form.message} onChange={set('message')} className={`${inp} resize-none`} />
+                    <label className="block font-sans text-[10px] font-semibold text-cream/70 uppercase tracking-widest mb-2.5">
+                      Message *
+                    </label>
+                    <textarea
+                      required
+                      rows={5}
+                      placeholder="Please describe your enquiry in detail…"
+                      value={form.message}
+                      onChange={set('message')}
+                      className={`${inputClass} resize-none`}
+                      style={inputStyle}
+                      onFocus={e => e.target.style.borderBottomColor = '#D4A847'}
+                      onBlur={e => e.target.style.borderBottomColor = '#252525'}
+                    />
                   </div>
+
                   <p className="font-sans text-xs text-muted">
                     By submitting this form you agree to our{' '}
                     <Link to="/privacy-policy" className="text-gold hover:underline">Privacy Policy</Link>.
                   </p>
-                  <button type="submit" disabled={loading}
-                    className="w-full py-3.5 bg-navy-900 text-white font-sans text-sm font-medium tracking-wide hover:bg-navy-950 transition-colors disabled:opacity-60"
+
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="w-full py-3.5 bg-gold text-bg font-sans text-sm font-semibold tracking-wide hover:bg-gold-light active:bg-gold-dark transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {loading ? 'Sending…' : 'Send Message'}
                   </button>

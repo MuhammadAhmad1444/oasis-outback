@@ -24,20 +24,20 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen flex flex-col bg-white">
+      <div className="min-h-screen flex flex-col bg-bg">
         <Navbar />
         <main className="flex-1 pt-16 lg:pt-20">
           <Routes>
-            <Route path="/"                element={<Home />} />
-            <Route path="/about"           element={<About />} />
-            <Route path="/services"        element={<Services />} />
-            <Route path="/shop"            element={<Shop />} />
-            <Route path="/contact"         element={<Contact />} />
-            <Route path="/privacy-policy"  element={<PrivacyPolicy />} />
+            <Route path="/"                 element={<Home />} />
+            <Route path="/about"            element={<About />} />
+            <Route path="/services"         element={<Services />} />
+            <Route path="/shop"             element={<Shop />} />
+            <Route path="/contact"          element={<Contact />} />
+            <Route path="/privacy-policy"   element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
-            <Route path="/refund-policy"   element={<RefundPolicy />} />
-            <Route path="/shipping-policy" element={<ShippingPolicy />} />
-            <Route path="/cookie-policy"   element={<CookiePolicy />} />
+            <Route path="/refund-policy"    element={<RefundPolicy />} />
+            <Route path="/shipping-policy"  element={<ShippingPolicy />} />
+            <Route path="/cookie-policy"    element={<CookiePolicy />} />
           </Routes>
         </main>
         <Footer />

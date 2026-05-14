@@ -4,18 +4,96 @@
 
 @layer base {
   html { scroll-behavior: smooth; }
-  body { @apply bg-cream text-ink antialiased; font-family: 'DM Sans', system-ui, sans-serif; }
+
+  body {
+    @apply bg-bg text-cream antialiased;
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+
+  /* Grain overlay for depth */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    background-size: 300px;
+  }
+
+  ::-webkit-scrollbar { width: 3px; }
+  ::-webkit-scrollbar-track { background: #0A0A0A; }
+  ::-webkit-scrollbar-thumb { background: #D4A847; border-radius: 1px; }
+  * { scrollbar-width: thin; scrollbar-color: #D4A847 #0A0A0A; }
+
+  ::selection { background: rgba(212, 168, 71, 0.25); color: #F0EAD6; }
 }
 
 @layer components {
-  .section-label { @apply text-gold font-sans text-[10px] font-semibold tracking-[0.2em] uppercase; }
+  .label {
+    @apply font-sans text-[10px] font-semibold tracking-[0.28em] uppercase text-gold;
+  }
 
-  .legal-content h2  { @apply font-serif font-normal text-xl text-ink mt-10 mb-3 pb-2; border-bottom: 1px solid #C9A84C; }
-  .legal-content h3  { @apply text-sm font-semibold text-ink mt-6 mb-2; }
-  .legal-content p   { @apply text-muted text-sm leading-7 mb-4; }
-  .legal-content ul  { @apply list-disc ml-5 space-y-1.5 text-sm text-muted leading-7 mb-4; }
-  .legal-content ol  { @apply list-decimal ml-5 space-y-1.5 text-sm text-muted leading-7 mb-4; }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 bg-gold text-bg font-sans text-sm font-semibold tracking-wide hover:bg-gold-light active:bg-gold-dark transition-all duration-200;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 border border-gold/40 text-gold font-sans text-sm font-medium tracking-wide hover:border-gold transition-all duration-200;
+  }
+  .btn-outline:hover { background-color: rgba(212, 168, 71, 0.08); }
+  .btn-outline:active { background-color: rgba(212, 168, 71, 0.14); }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 text-gold font-sans text-sm font-medium hover:gap-3 transition-all duration-200;
+  }
+
+  .card-dark {
+    @apply bg-surface border border-line hover:border-gold/25 transition-all duration-300;
+  }
+
+  /* Gold hairline divider */
+  .gold-rule { @apply w-10 h-px bg-gold; }
+
+  /* Section header pattern */
+  .section-head { @apply text-center mb-14 lg:mb-18; }
+
+  /* Legal content */
+  .legal-content h2  { @apply font-serif font-light text-xl text-cream mt-10 mb-3 pb-2 border-b border-gold/20; }
+  .legal-content h3  { @apply font-sans text-sm font-semibold text-cream mt-6 mb-2; }
+  .legal-content p   { @apply font-sans text-warm text-sm leading-7 mb-4; }
+  .legal-content ul  { @apply list-disc ml-5 space-y-1.5 text-sm text-warm leading-7 mb-4; }
+  .legal-content ol  { @apply list-decimal ml-5 space-y-1.5 text-sm text-warm leading-7 mb-4; }
   .legal-content a   { @apply text-gold hover:underline; }
-  .legal-content strong { @apply font-semibold text-ink; }
-  .legal-content .notice-box { @apply bg-cream-dark border-l-4 border-gold rounded-r-lg p-5 text-sm text-ink mb-6; }
+  .legal-content strong { @apply font-semibold text-cream; }
+  .legal-content .notice-box { @apply bg-raised border-l-4 border-gold p-5 text-sm text-cream mb-6; }
+}
+
+/* Entrance animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.anim-fade-up {
+  animation: fadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.anim-fade-in {
+  animation: fadeIn 0.6s ease both;
+}
+
+.anim-scale-in {
+  animation: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
