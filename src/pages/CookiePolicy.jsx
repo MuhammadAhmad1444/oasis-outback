@@ -116,7 +116,7 @@ export default function CookiePolicy() {
       <h2>7. Contact Us</h2>
       <p>
         If you have any questions about our use of cookies, please contact us at{' '}
-        <a href="mailto:support@chiccub.com">support@chiccub.com</a> or write to:
+        <a href="mailto:info@chiccub.com">info@chiccub.com</a> or write to:
       </p>
       <ul>
         <li>Chic Cub Ltd, Office 1307, 60 Tottenham Court Road, Fitzrovia, London, W1T 2EW</li>

@@ -3,9 +3,9 @@ import { MapPin, Mail, Phone } from 'lucide-react'
 
 const COMPANY = {
   name:    'Chic Cub Ltd',
-  number:  '[COMPANY_NUMBER]',
+  number:  '17232277',
   address: 'Office 1307, 60 Tottenham Court Road, Fitzrovia, London, W1T 2EW',
-  email:   'support@chiccub.com',
+  email:   'info@chiccub.com',
   phone:   '+44 20 7946 0958',
 }
 

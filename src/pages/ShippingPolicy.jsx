@@ -104,14 +104,14 @@ export default function ShippingPolicy() {
         It is your responsibility to provide a complete and accurate delivery address at the time of order.
         We cannot be held responsible for orders delivered to an incorrect address provided by the customer.
         If you notice an error in your delivery address immediately after placing an order, please contact
-        us as soon as possible at <a href="mailto:support@chiccub.com">support@chiccub.com</a> — we will
+        us as soon as possible at <a href="mailto:info@chiccub.com">info@chiccub.com</a> — we will
         attempt to amend the address before dispatch, but this cannot be guaranteed.
       </p>
 
       <h2>9. Contact Us</h2>
       <p>
         For any shipping or delivery enquiries, please contact us at{' '}
-        <a href="mailto:support@chiccub.com">support@chiccub.com</a> or call{' '}
+        <a href="mailto:info@chiccub.com">info@chiccub.com</a> or call{' '}
         <a href="tel:+442079460958">+44 20 7946 0958</a>.
       </p>
     </LegalPage>

@@ -23,7 +23,7 @@ export default function RefundPolicy() {
       <ul>
         <li>
           <strong>Email:</strong> Send a clear statement of your cancellation to{' '}
-          <a href="mailto:support@chiccub.com">support@chiccub.com</a>, including your order number,
+          <a href="mailto:info@chiccub.com">info@chiccub.com</a>, including your order number,
           name, and address
         </li>
         <li>
@@ -98,7 +98,7 @@ export default function RefundPolicy() {
       <h2>8. Contact Us</h2>
       <p>
         If you have any questions about returns or refunds, please contact us at{' '}
-        <a href="mailto:support@chiccub.com">support@chiccub.com</a> or call us on{' '}
+        <a href="mailto:info@chiccub.com">info@chiccub.com</a> or call us on{' '}
         <a href="tel:+442079460958">+44 20 7946 0958</a>.
       </p>
     </LegalPage>

@@ -12,10 +12,10 @@ const itFeatures  = ['Web Development & Architecture', 'Software Infrastructure 
 const retFeatures = ['Curated Premium Product Catalogue', 'End-to-End Sales Management', 'Integrated Logistics & Fulfilment', 'UK Consumer Contracts Compliant']
 
 const products = [
-  { id: 1, name: 'Executive Leather Tote',  category: 'Accessories',   price: '£89.00',  badge: 'New Arrival', img: 'https://picsum.photos/seed/cc-tote/600/480' },
-  { id: 2, name: 'Merino Wool Scarf',        category: 'Lifestyle',     price: '£45.00',  badge: null,          img: 'https://picsum.photos/seed/cc-scarf/600/480' },
-  { id: 3, name: 'Slim Cardholder',          category: 'Accessories',   price: '£29.00',  badge: 'Best Seller', img: 'https://picsum.photos/seed/cc-card/600/480' },
-  { id: 4, name: 'Cashmere Throw Blanket',   category: 'Home & Living', price: '£120.00', badge: null,          img: 'https://picsum.photos/seed/cc-throw/600/480' },
+  { id: 1, name: 'Classic Logo T-Shirt',    category: 'Apparel',     price: '£22.00', badge: 'New Arrival', img: 'https://picsum.photos/seed/cc-tshirt-logo/600/480' },
+  { id: 2, name: 'Premium Pullover Hoodie', category: 'Apparel',     price: '£45.00', badge: 'Best Seller', img: 'https://picsum.photos/seed/cc-hoodie-pull/600/480' },
+  { id: 3, name: 'Classic Branded Mug',     category: 'Drinkware',   price: '£14.00', badge: null,          img: 'https://picsum.photos/seed/cc-mug-classic/600/480' },
+  { id: 4, name: 'Abstract Art Print A3',   category: 'Wall Art',    price: '£24.00', badge: null,          img: 'https://picsum.photos/seed/cc-art-abstract/600/480' },
 ]
 
 const trustItems = [
@@ -203,7 +203,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex items-end justify-between mb-14">
             <div>
-              <span className="label mb-3 block">Current Inventory</span>
+              <span className="label mb-3 block">Print on Demand</span>
               <h2 className="font-serif font-light text-3xl text-cream">Featured Products</h2>
             </div>
             <Link to="/shop" className="hidden sm:flex btn-ghost">

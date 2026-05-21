@@ -15,13 +15,13 @@ export default function PrivacyPolicy() {
       </p>
       <ul>
         <li><strong>Company Name:</strong> Chic Cub Ltd</li>
-        <li><strong>Company Number:</strong> [COMPANY_NUMBER]</li>
+        <li><strong>Company Number:</strong> 17232277</li>
         <li><strong>Registered Office:</strong> Office 1307, 60 Tottenham Court Road, Fitzrovia, London, W1T 2EW</li>
-        <li><strong>Email:</strong> support@chiccub.com</li>
+        <li><strong>Email:</strong> info@chiccub.com</li>
       </ul>
       <p>
         If you have any questions about how we handle your personal data, please contact us at{' '}
-        <a href="mailto:support@chiccub.com">support@chiccub.com</a>.
+        <a href="mailto:info@chiccub.com">info@chiccub.com</a>.
       </p>
 
       <h2>2. What Personal Data We Collect</h2>
@@ -120,7 +120,7 @@ export default function PrivacyPolicy() {
         <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time where processing is consent-based</li>
       </ul>
       <p>
-        To exercise any of these rights, contact us at <a href="mailto:support@chiccub.com">support@chiccub.com</a>.
+        To exercise any of these rights, contact us at <a href="mailto:info@chiccub.com">info@chiccub.com</a>.
         We will respond within 30 days. If you are unsatisfied with our response, you have the right to lodge a
         complaint with the <strong>Information Commissioner's Office (ICO)</strong> at{' '}
         <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer">ico.org.uk</a>.
@@ -143,7 +143,7 @@ export default function PrivacyPolicy() {
         For any privacy-related queries, to exercise your rights, or to raise a concern, please contact:
       </p>
       <ul>
-        <li><strong>Email:</strong> <a href="mailto:support@chiccub.com">support@chiccub.com</a></li>
+        <li><strong>Email:</strong> <a href="mailto:info@chiccub.com">info@chiccub.com</a></li>
         <li><strong>Post:</strong> Chic Cub Ltd, Office 1307, 60 Tottenham Court Road, Fitzrovia, London, W1T 2EW</li>
       </ul>
     </LegalPage>

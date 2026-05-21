@@ -15,9 +15,9 @@ export default function TermsOfService() {
       </p>
       <ul>
         <li><strong>Company Name:</strong> Chic Cub Ltd</li>
-        <li><strong>Company Number:</strong> [COMPANY_NUMBER]</li>
+        <li><strong>Company Number:</strong> 17232277</li>
         <li><strong>Registered Office:</strong> Office 1307, 60 Tottenham Court Road, Fitzrovia, London, W1T 2EW</li>
-        <li><strong>Email:</strong> support@chiccub.com</li>
+        <li><strong>Email:</strong> info@chiccub.com</li>
         <li><strong>Telephone:</strong> +44 20 7946 0958</li>
       </ul>
 
@@ -83,7 +83,7 @@ export default function TermsOfService() {
       <p>
         Under the Consumer Rights Act 2015, goods must be of satisfactory quality, fit for purpose, and as
         described. If your order does not meet these standards, you are entitled to a repair, replacement,
-        or refund. Please contact us at <a href="mailto:support@chiccub.com">support@chiccub.com</a>.
+        or refund. Please contact us at <a href="mailto:info@chiccub.com">info@chiccub.com</a>.
       </p>
 
       <h2>10. Intellectual Property</h2>
@@ -127,7 +127,7 @@ export default function TermsOfService() {
       <h2>15. Contact</h2>
       <p>
         For any queries regarding these Terms of Service, please contact us at{' '}
-        <a href="mailto:support@chiccub.com">support@chiccub.com</a> or in writing to our registered office.
+        <a href="mailto:info@chiccub.com">info@chiccub.com</a> or in writing to our registered office.
       </p>
     </LegalPage>
   )
