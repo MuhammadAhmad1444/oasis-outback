@@ -1,13 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MapPin, Mail, Phone } from 'lucide-react'
-
-const COMPANY = {
-  name:    'Chic Cub Ltd',
-  number:  '17232277',
-  address: 'Office 1307, 60 Tottenham Court Road, Fitzrovia, London, W1T 2EW',
-  email:   'info@chiccub.com',
-  phone:   '+44 20 7946 0958',
-}
+import { COMPANY } from '../data/company'
 
 const companyLinks = [
   { label: 'About Us',   path: '/about' },
@@ -32,7 +25,7 @@ export default function Footer() {
       {/* Brand quote strip */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-12 border-b border-line">
         <p className="font-serif italic font-light text-3xl lg:text-[2.4rem] text-cream max-w-2xl leading-snug">
-          "Specialized digital solutions &amp; global retail excellence."
+          "Everyday essentials, curated and delivered across Australia."
         </p>
         <div className="w-10 h-px bg-gold mt-7" />
       </div>
@@ -43,16 +36,16 @@ export default function Footer() {
 
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-baseline gap-1 mb-6 group">
-              <span className="font-serif italic text-lg text-cream group-hover:text-gold-light transition-colors duration-300">Chic</span>
-              <span className="font-sans font-light text-lg text-muted tracking-[0.18em] group-hover:text-warm transition-colors duration-300">CUB</span>
+              <span className="font-serif italic text-lg text-cream group-hover:text-gold-light transition-colors duration-300">Oasis</span>
+              <span className="font-sans font-light text-lg text-muted tracking-[0.18em] group-hover:text-warm transition-colors duration-300">OUTBACK</span>
             </Link>
             <p className="font-sans text-sm text-muted leading-relaxed mb-7 max-w-sm">
-              A UK-registered technology and retail company built on transparency, technical excellence, and commercial integrity.
+              Oasis Outback is an Australian online retailer offering quality home, garden, automotive, lighting and lifestyle products, delivered Australia-wide through our Amazon Australia storefront.
             </p>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin size={12} className="text-gold mt-1 flex-shrink-0" />
-                <span className="text-muted leading-relaxed">{COMPANY.address}</span>
+                <span className="text-muted leading-relaxed">{COMPANY.addressFull}</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={12} className="text-gold flex-shrink-0" />
@@ -60,7 +53,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={12} className="text-gold flex-shrink-0" />
-                <a href="tel:+442079460958" className="text-muted hover:text-cream transition-colors duration-200">{COMPANY.phone}</a>
+                <a href={COMPANY.phoneHref} className="text-muted hover:text-cream transition-colors duration-200">{COMPANY.phone}</a>
               </li>
             </ul>
           </div>
@@ -97,11 +90,10 @@ export default function Footer() {
             <div className="space-y-1">
               <p>
                 <span className="text-muted">{COMPANY.name}</span>
-                {' · '}Company No.{' '}
-                <span className="text-muted">{COMPANY.number}</span>
+                {' · '}Australian online retailer
               </p>
-              <p>Registered Office: {COMPANY.address}</p>
-              <p>Private limited company registered in England and Wales.</p>
+              <p>Operated by {COMPANY.proprietor}, based in Forest Hill, {COMPANY.region}.</p>
+              <p>{COMPANY.addressFull}</p>
             </div>
             <p className="md:text-right flex-shrink-0">© {year} {COMPANY.name}. All rights reserved.</p>
           </div>

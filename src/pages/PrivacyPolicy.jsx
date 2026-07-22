@@ -2,128 +2,89 @@ import LegalPage from '../components/LegalPage'
 
 export default function PrivacyPolicy() {
   return (
-    <LegalPage title="Privacy Policy" lastUpdated="14 May 2026">
+    <LegalPage title="Privacy Policy" lastUpdated="23 July 2026">
       <div className="notice-box">
-        This Privacy Policy explains how <strong>Chic Cub Ltd</strong> ("we", "us", "our") collects, uses,
-        stores, and protects your personal data. We are committed to full compliance with the UK General Data
-        Protection Regulation (UK GDPR) and the Data Protection Act 2018.
+        This Privacy Policy explains how <strong>Oasis Outback</strong> ("we", "us", "our") collects, uses,
+        stores, and protects your personal information. We handle personal information in accordance with the
+        <strong> Privacy Act 1988 (Cth)</strong> and the <strong>Australian Privacy Principles (APPs)</strong>.
       </div>
 
-      <h2>1. Who We Are (Data Controller)</h2>
+      <h2>1. Who We Are</h2>
       <p>
-        <strong>Chic Cub Ltd</strong> is the data controller for personal data collected via this website.
+        Oasis Outback is an Australian online retailer operated by Muhammad Waqas, based in Forest Hill,
+        Victoria. We sell everyday products which are listed and fulfilled through our Amazon Australia storefront.
       </p>
       <ul>
-        <li><strong>Company Name:</strong> Chic Cub Ltd</li>
-        <li><strong>Company Number:</strong> 17232277</li>
-        <li><strong>Registered Office:</strong> Office 1307, 60 Tottenham Court Road, Fitzrovia, London, W1T 2EW</li>
-        <li><strong>Email:</strong> info@chiccub.com</li>
+        <li><strong>Business:</strong> Oasis Outback</li>
+        <li><strong>Operated by:</strong> Muhammad Waqas</li>
+        <li><strong>Address:</strong> 4 Longbrae Avenue, Forest Hill VIC 3131, Australia</li>
+        <li><strong>Email:</strong> <a href="mailto:store@oasisoutback.com">store@oasisoutback.com</a></li>
       </ul>
-      <p>
-        If you have any questions about how we handle your personal data, please contact us at{' '}
-        <a href="mailto:info@chiccub.com">info@chiccub.com</a>.
-      </p>
 
-      <h2>2. What Personal Data We Collect</h2>
-      <p>We may collect the following categories of personal data:</p>
-      <h3>a) Data you provide to us</h3>
+      <h2>2. What Personal Information We Collect</h2>
+      <h3>a) Information you provide to us</h3>
       <ul>
-        <li>Name and contact details (email address, telephone number)</li>
-        <li>Company name and job title (for B2B enquiries)</li>
-        <li>Billing and delivery address (for retail orders)</li>
-        <li>Payment information (processed by our payment provider — we do not store card details)</li>
-        <li>Messages and correspondence you send via our contact form</li>
+        <li>Your name and contact details (email address, telephone number)</li>
+        <li>Messages and correspondence you send us via our contact form or email</li>
+        <li>Any details you choose to share about a product enquiry, order, or return</li>
       </ul>
-      <h3>b) Data collected automatically</h3>
+      <h3>b) Information collected automatically</h3>
       <ul>
-        <li>IP address and browser information</li>
-        <li>Pages visited and time spent on site</li>
-        <li>Referring website or search terms</li>
+        <li>IP address and general device/browser information</li>
+        <li>Pages visited and time spent on our website</li>
         <li>Cookie data (see our <a href="/cookie-policy">Cookie Policy</a>)</li>
       </ul>
-
-      <h2>3. Lawful Basis for Processing</h2>
-      <p>Under UK GDPR, we process your personal data on the following lawful bases:</p>
-      <ul>
-        <li>
-          <strong>Contract (Article 6(1)(b)):</strong> To fulfil orders, process payments, and provide the
-          services you have requested.
-        </li>
-        <li>
-          <strong>Legitimate Interests (Article 6(1)(f)):</strong> To respond to enquiries, improve our
-          website, and protect against fraud. We have conducted a Legitimate Interests Assessment (LIA) to
-          ensure this does not override your rights.
-        </li>
-        <li>
-          <strong>Legal Obligation (Article 6(1)(c)):</strong> To comply with UK tax law, Companies House
-          requirements, and other regulatory obligations.
-        </li>
-        <li>
-          <strong>Consent (Article 6(1)(a)):</strong> For marketing communications and non-essential cookies,
-          where we have obtained your explicit consent. You may withdraw consent at any time.
-        </li>
-      </ul>
-
-      <h2>4. How We Use Your Data</h2>
-      <ul>
-        <li>To process and fulfil your orders and send order confirmations</li>
-        <li>To respond to enquiries and provide customer support</li>
-        <li>To manage your account and preferences</li>
-        <li>To send transactional communications (e.g., shipping updates)</li>
-        <li>To send marketing communications where you have consented</li>
-        <li>To improve the functionality and content of our website</li>
-        <li>To detect and prevent fraud and abuse</li>
-        <li>To comply with our legal and regulatory obligations</li>
-      </ul>
-
-      <h2>5. Data Sharing</h2>
       <p>
-        We do not sell your personal data. We may share it with carefully selected third parties where
-        necessary to provide our services:
-      </p>
-      <ul>
-        <li><strong>Payment processors</strong> (e.g., Stripe) — to process card transactions securely</li>
-        <li><strong>Delivery and logistics partners</strong> — to fulfil and ship orders</li>
-        <li><strong>IT and hosting providers</strong> — to operate and maintain our platform</li>
-        <li><strong>Analytics providers</strong> — to understand how our website is used (anonymised)</li>
-        <li><strong>Legal and regulatory authorities</strong> — where required by law</li>
-      </ul>
-      <p>
-        All third parties are required to handle your data in accordance with UK GDPR and are bound by
-        appropriate data processing agreements.
+        Because purchases are completed on Amazon Australia, your order, payment, and delivery details are
+        collected and processed by Amazon under <strong>Amazon's own privacy notice</strong>. We do not
+        receive or store your payment card details.
       </p>
 
-      <h2>6. International Data Transfers</h2>
+      <h2>3. How We Use Your Information</h2>
+      <ul>
+        <li>To respond to your enquiries and provide customer support</li>
+        <li>To help you with orders, returns, and product questions</li>
+        <li>To operate, maintain, and improve our website</li>
+        <li>To detect and prevent fraud or misuse</li>
+        <li>To comply with our legal and record-keeping obligations</li>
+      </ul>
+
+      <h2>4. Disclosure of Your Information</h2>
+      <p>We do not sell your personal information. We may disclose it where reasonably necessary to:</p>
+      <ul>
+        <li><strong>Amazon Australia</strong> — the marketplace through which our products are sold and fulfilled</li>
+        <li><strong>Service providers</strong> — such as website hosting and email providers</li>
+        <li><strong>Government or regulatory authorities</strong> — where required or authorised by law</li>
+      </ul>
+
+      <h2>5. Overseas Disclosure (APP 8)</h2>
       <p>
-        Some of our service providers are based outside the UK. Where data is transferred internationally,
-        we ensure appropriate safeguards are in place, such as the UK International Data Transfer Agreement
-        (IDTA) or adequacy decisions, in accordance with UK GDPR Chapter V.
+        Some of our service providers (including marketplace and hosting providers) may store or process data
+        outside Australia. Where this occurs, we take reasonable steps to ensure your information is handled
+        consistently with the Australian Privacy Principles.
       </p>
 
-      <h2>7. Data Retention</h2>
-      <ul>
-        <li><strong>Order data:</strong> Retained for 7 years to comply with HMRC requirements</li>
-        <li><strong>Contact enquiries:</strong> Retained for 2 years from last contact</li>
-        <li><strong>Marketing consent records:</strong> Retained until consent is withdrawn, plus 1 year</li>
-        <li><strong>Website analytics:</strong> Retained for up to 26 months in anonymised form</li>
-      </ul>
-
-      <h2>8. Your Rights Under UK GDPR</h2>
-      <p>You have the following rights regarding your personal data:</p>
-      <ul>
-        <li><strong>Right of Access (Article 15):</strong> Request a copy of the data we hold about you</li>
-        <li><strong>Right to Rectification (Article 16):</strong> Request correction of inaccurate data</li>
-        <li><strong>Right to Erasure (Article 17):</strong> Request deletion of your data ("right to be forgotten")</li>
-        <li><strong>Right to Restrict Processing (Article 18):</strong> Request we limit how we use your data</li>
-        <li><strong>Right to Data Portability (Article 20):</strong> Receive your data in a structured, machine-readable format</li>
-        <li><strong>Right to Object (Article 21):</strong> Object to processing based on legitimate interests or direct marketing</li>
-        <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time where processing is consent-based</li>
-      </ul>
+      <h2>6. Data Security</h2>
       <p>
-        To exercise any of these rights, contact us at <a href="mailto:info@chiccub.com">info@chiccub.com</a>.
-        We will respond within 30 days. If you are unsatisfied with our response, you have the right to lodge a
-        complaint with the <strong>Information Commissioner's Office (ICO)</strong> at{' '}
-        <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer">ico.org.uk</a>.
+        We take reasonable steps to protect your personal information from misuse, interference, loss, and
+        unauthorised access, modification, or disclosure. No method of transmission over the internet is
+        completely secure, but we work to safeguard the information we hold.
+      </p>
+
+      <h2>7. Retention of Information</h2>
+      <p>
+        We keep personal information only for as long as necessary for the purposes described in this policy,
+        or as required to meet Australian tax and record-keeping obligations (for example, records that may be
+        required by the Australian Taxation Office). When no longer needed, information is securely deleted or
+        de-identified.
+      </p>
+
+      <h2>8. Access and Correction (APP 12 &amp; APP 13)</h2>
+      <p>
+        You have the right to request access to the personal information we hold about you and to ask us to
+        correct it if it is inaccurate, out of date, or incomplete. To make a request, contact us at{' '}
+        <a href="mailto:store@oasisoutback.com">store@oasisoutback.com</a>. We will respond within a reasonable
+        period.
       </p>
 
       <h2>9. Cookies</h2>
@@ -132,19 +93,25 @@ export default function PrivacyPolicy() {
         see our <a href="/cookie-policy">Cookie Policy</a>.
       </p>
 
-      <h2>10. Changes to This Policy</h2>
+      <h2>10. Complaints</h2>
       <p>
-        We may update this Privacy Policy from time to time. Material changes will be communicated via a
-        prominent notice on our website. The date at the top of this page reflects the most recent revision.
+        If you have a concern about how we have handled your personal information, please contact us first at{' '}
+        <a href="mailto:store@oasisoutback.com">store@oasisoutback.com</a> and we will do our best to resolve it.
+        If you are not satisfied with our response, you may lodge a complaint with the{' '}
+        <strong>Office of the Australian Information Commissioner (OAIC)</strong> at{' '}
+        <a href="https://www.oaic.gov.au" target="_blank" rel="noopener noreferrer">oaic.gov.au</a>.
       </p>
 
-      <h2>11. Contact Us</h2>
+      <h2>11. Changes to This Policy</h2>
       <p>
-        For any privacy-related queries, to exercise your rights, or to raise a concern, please contact:
+        We may update this Privacy Policy from time to time. The date at the top of this page reflects the
+        most recent revision. We encourage you to review it periodically.
       </p>
+
+      <h2>12. Contact Us</h2>
       <ul>
-        <li><strong>Email:</strong> <a href="mailto:info@chiccub.com">info@chiccub.com</a></li>
-        <li><strong>Post:</strong> Chic Cub Ltd, Office 1307, 60 Tottenham Court Road, Fitzrovia, London, W1T 2EW</li>
+        <li><strong>Email:</strong> <a href="mailto:store@oasisoutback.com">store@oasisoutback.com</a></li>
+        <li><strong>Post:</strong> Oasis Outback, 4 Longbrae Avenue, Forest Hill VIC 3131, Australia</li>
       </ul>
     </LegalPage>
   )

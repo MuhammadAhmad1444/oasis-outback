@@ -2,132 +2,107 @@ import LegalPage from '../components/LegalPage'
 
 export default function TermsOfService() {
   return (
-    <LegalPage title="Terms of Service" lastUpdated="14 May 2026">
+    <LegalPage title="Terms of Service" lastUpdated="23 July 2026">
       <div className="notice-box">
-        Please read these Terms of Service carefully before using the Chic Cub website or placing an order.
-        By accessing our site or making a purchase, you agree to be bound by these terms.
+        Please read these Terms of Service carefully before using the Oasis Outback website. By accessing our
+        site you agree to be bound by these terms. Purchases are completed through our Amazon Australia
+        storefront and are also subject to Amazon Australia's terms and conditions.
       </div>
 
       <h2>1. About Us</h2>
       <p>
-        This website is operated by <strong>Chic Cub Ltd</strong>, a private limited company registered in
-        England and Wales.
+        This website is operated by <strong>Oasis Outback</strong>, an Australian online retailer operated by
+        Muhammad Waqas.
       </p>
       <ul>
-        <li><strong>Company Name:</strong> Chic Cub Ltd</li>
-        <li><strong>Company Number:</strong> 17232277</li>
-        <li><strong>Registered Office:</strong> Office 1307, 60 Tottenham Court Road, Fitzrovia, London, W1T 2EW</li>
-        <li><strong>Email:</strong> info@chiccub.com</li>
-        <li><strong>Telephone:</strong> +44 20 7946 0958</li>
+        <li><strong>Business:</strong> Oasis Outback</li>
+        <li><strong>Operated by:</strong> Muhammad Waqas</li>
+        <li><strong>Address:</strong> 4 Longbrae Avenue, Forest Hill VIC 3131, Australia</li>
+        <li><strong>Email:</strong> <a href="mailto:store@oasisoutback.com">store@oasisoutback.com</a></li>
+        <li><strong>Telephone:</strong> +61 483 982 589</li>
       </ul>
 
       <h2>2. Acceptance of Terms</h2>
       <p>
-        By accessing or using our website, you confirm that you are at least 18 years of age, that you have
-        read and understood these Terms of Service, and that you agree to be bound by them. If you do not
-        agree, please do not use our website.
+        By accessing or using our website, you confirm that you have read and understood these Terms of
+        Service and agree to be bound by them. If you do not agree, please do not use our website.
       </p>
 
-      <h2>3. Our Services</h2>
-      <p>Chic Cub Ltd operates two distinct business divisions:</p>
-      <h3>IT Consultancy</h3>
+      <h2>3. What We Do</h2>
       <p>
-        We provide enterprise web development, software infrastructure design, digital strategy, and technical
-        governance services to business clients. Specific terms for consultancy engagements are set out in
-        separate client service agreements.
-      </p>
-      <h3>Direct-to-Consumer Retail</h3>
-      <p>
-        We sell curated consumer goods through our online store. These Terms of Service apply to all retail
-        purchases made through our website.
+        Oasis Outback is a retail business. We curate and list everyday consumer products — including lighting,
+        homewares, garden, automotive, kitchen, and electronics — which are sold and fulfilled through our
+        Amazon Australia storefront. When you select "View on Amazon", your purchase is completed on Amazon
+        Australia and is governed by Amazon's terms, conditions, and policies in addition to these terms.
       </p>
 
-      <h2>4. Product Information</h2>
+      <h2>4. Product Information and Pricing</h2>
       <p>
-        We take reasonable care to ensure that product descriptions, images, and prices are accurate at the
-        time of publication. However, we reserve the right to correct errors. If a product is incorrectly
-        priced, we will contact you before processing your order.
+        We take reasonable care to ensure product descriptions, images, and prices shown on our website are
+        accurate. However, availability and pricing are ultimately determined at the point of sale on Amazon
+        Australia and may change. All prices are in <strong>Australian Dollars (AUD)</strong> and include GST
+        where applicable. Product images on this site may be representative; always review the listing on
+        Amazon Australia before purchasing.
       </p>
 
-      <h2>5. Ordering and Contract Formation</h2>
+      <h2>5. Orders and Fulfilment</h2>
       <p>
-        When you place an order through our website, you are making an offer to purchase. A contract is only
-        formed when we send you an order confirmation email. We reserve the right to decline any order at
-        our discretion, including where items are out of stock or where we suspect fraud.
+        Orders are placed, processed, paid for, and fulfilled through Amazon Australia. Order confirmation,
+        payment security, dispatch, and delivery are handled via your Amazon account. Please refer to our{' '}
+        <a href="/shipping-policy">Shipping &amp; Delivery Policy</a> for delivery information.
       </p>
 
-      <h2>6. Pricing and Payment</h2>
+      <h2>6. Your Consumer Rights</h2>
+      <p>
+        Our goods come with guarantees that cannot be excluded under the <strong>Australian Consumer Law
+        (ACL)</strong>. Among other things, goods must be of acceptable quality, fit for any purpose made
+        known, and match their description.
+      </p>
       <ul>
-        <li>All prices are displayed in Pounds Sterling (GBP) and include VAT where applicable</li>
-        <li>Payment is processed securely at the time of order via our PCI DSS-compliant payment provider</li>
-        <li>We accept major credit and debit cards and other payment methods as displayed at checkout</li>
-        <li>We do not store your card details on our servers</li>
+        <li>For a <strong>major failure</strong>, you are entitled to a replacement or refund, and compensation for any other reasonably foreseeable loss or damage.</li>
+        <li>For a <strong>minor failure</strong> that can be remedied, the goods may be repaired or replaced within a reasonable time.</li>
       </ul>
-
-      <h2>7. Delivery</h2>
       <p>
-        Delivery timescales and costs are set out in our{' '}
-        <a href="/shipping-policy">Shipping &amp; Delivery Policy</a>. Risk in goods passes to you upon
-        delivery. Title to goods passes upon receipt of full payment.
+        See our <a href="/refund-policy">Refund &amp; Returns Policy</a> for how to make a claim.
       </p>
 
-      <h2>8. Consumer Rights and Cancellation</h2>
+      <h2>7. Intellectual Property</h2>
       <p>
-        If you are a consumer based in the UK, you have the right to cancel your order within 14 days of
-        receiving your goods under the Consumer Contracts (Information, Cancellation and Additional Charges)
-        Regulations 2013. Full details are set out in our{' '}
-        <a href="/refund-policy">Refund &amp; Cancellation Policy</a>.
+        All content on this website — including text, images, logos, and graphics — is the intellectual
+        property of Oasis Outback or its licensors and is protected by Australian and international law. You
+        may not reproduce, distribute, or use any content without our prior written consent.
       </p>
 
-      <h2>9. Faulty or Misdescribed Goods</h2>
+      <h2>8. Limitation of Liability</h2>
       <p>
-        Under the Consumer Rights Act 2015, goods must be of satisfactory quality, fit for purpose, and as
-        described. If your order does not meet these standards, you are entitled to a repair, replacement,
-        or refund. Please contact us at <a href="mailto:info@chiccub.com">info@chiccub.com</a>.
+        Nothing in these terms excludes, restricts, or modifies any consumer guarantee, right, or remedy that
+        cannot be excluded under the Australian Consumer Law. Subject to that, to the fullest extent permitted
+        by law, Oasis Outback is not liable for any indirect or consequential loss arising from your use of
+        this website.
       </p>
 
-      <h2>10. Intellectual Property</h2>
+      <h2>9. Privacy</h2>
       <p>
-        All content on this website — including text, images, logos, graphics, and software — is the
-        intellectual property of Chic Cub Ltd or its licensors and is protected by UK and international
-        copyright law. You may not reproduce, distribute, or use any content without our prior written
-        consent.
-      </p>
-
-      <h2>11. Limitation of Liability</h2>
-      <p>
-        To the fullest extent permitted by law, Chic Cub Ltd shall not be liable for any indirect, incidental,
-        special, or consequential loss arising out of your use of our website or services. Our total liability
-        to you in respect of any claim shall not exceed the value of the relevant order.
-      </p>
-      <p>
-        Nothing in these terms limits our liability for death or personal injury caused by our negligence,
-        fraud or fraudulent misrepresentation, or any other liability that cannot be excluded by law.
-      </p>
-
-      <h2>12. Privacy</h2>
-      <p>
-        Our collection and use of your personal data is governed by our{' '}
+        Our collection and use of your personal information is governed by our{' '}
         <a href="/privacy-policy">Privacy Policy</a>, which forms part of these Terms of Service.
       </p>
 
-      <h2>13. Governing Law and Jurisdiction</h2>
+      <h2>10. Governing Law</h2>
       <p>
-        These Terms of Service are governed by and construed in accordance with the laws of{' '}
-        <strong>England and Wales</strong>. Any disputes arising in connection with these terms shall be
-        subject to the exclusive jurisdiction of the courts of England and Wales.
+        These Terms of Service are governed by the laws of <strong>Victoria, Australia</strong>. Any disputes
+        will be subject to the jurisdiction of the courts of Victoria, Australia.
       </p>
 
-      <h2>14. Changes to These Terms</h2>
+      <h2>11. Changes to These Terms</h2>
       <p>
-        We reserve the right to update these Terms of Service at any time. Changes take effect when posted
-        on this page. Continued use of the website after changes constitutes acceptance of the revised terms.
+        We may update these Terms of Service at any time. Changes take effect when posted on this page.
+        Continued use of the website after changes constitutes acceptance of the revised terms.
       </p>
 
-      <h2>15. Contact</h2>
+      <h2>12. Contact</h2>
       <p>
         For any queries regarding these Terms of Service, please contact us at{' '}
-        <a href="mailto:info@chiccub.com">info@chiccub.com</a> or in writing to our registered office.
+        <a href="mailto:store@oasisoutback.com">store@oasisoutback.com</a>.
       </p>
     </LegalPage>
   )

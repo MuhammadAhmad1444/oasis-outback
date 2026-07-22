@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom'
 const details = [
   {
     icon: MapPin,
-    title: 'Registered Office',
+    title: 'Business Address',
     content: (
       <address className="not-italic font-sans text-sm text-warm leading-relaxed mt-1.5">
-        Office 1307, 60 Tottenham Court Road<br />
-        Fitzrovia, London, W1T 2EW<br />
-        United Kingdom
+        4 Longbrae Avenue<br />
+        Forest Hill VIC 3131<br />
+        Australia
       </address>
     ),
   },
@@ -18,8 +18,8 @@ const details = [
     icon: Mail,
     title: 'Email',
     content: (
-      <a href="mailto:info@chiccub.com" className="font-sans text-sm text-gold hover:underline mt-1.5 block">
-        info@chiccub.com
+      <a href="mailto:store@oasisoutback.com" className="font-sans text-sm text-gold hover:underline mt-1.5 block">
+        store@oasisoutback.com
       </a>
     ),
   },
@@ -27,8 +27,8 @@ const details = [
     icon: Phone,
     title: 'Telephone',
     content: (
-      <a href="tel:+442079460958" className="font-sans text-sm text-warm hover:text-cream transition-colors duration-200 mt-1.5 block">
-        +44 20 7946 0958
+      <a href="tel:+61483982589" className="font-sans text-sm text-warm hover:text-cream transition-colors duration-200 mt-1.5 block">
+        +61 483 982 589
       </a>
     ),
   },
@@ -37,20 +37,20 @@ const details = [
     title: 'Business Hours',
     content: (
       <p className="font-sans text-sm text-warm leading-relaxed mt-1.5">
-        Monday – Friday: 09:00 – 18:00 GMT<br />
-        Saturday: 10:00 – 14:00 GMT
+        Monday – Friday: 9:00am – 6:00pm AEST<br />
+        Saturday: 10:00am – 2:00pm AEST
       </p>
     ),
   },
 ]
 
 const subjects = [
-  'IT Consultancy Enquiry',
-  'Retail / Product Enquiry',
-  'Partnership Opportunity',
+  'Product Enquiry',
   'Order Support',
+  'Returns & Refunds',
+  'Shipping Question',
+  'Wholesale / Bulk Enquiry',
   'General Enquiry',
-  'Media / Press',
 ]
 
 export default function Contact() {
@@ -83,7 +83,7 @@ export default function Contact() {
           <h1 className="font-serif font-light text-5xl lg:text-6xl text-cream mb-6">Get in Touch</h1>
           <div className="w-10 h-px bg-gold mb-7" />
           <p className="font-sans text-base text-warm leading-[1.8] max-w-xl">
-            Our London-based team is available for consultancy enquiries, retail support, and general correspondence.
+            Our Melbourne-based team is here to help with product questions, orders, returns, and general enquiries.
           </p>
         </div>
       </section>
@@ -110,7 +110,7 @@ export default function Contact() {
               {/* Notice */}
               <div className="mt-10 p-5 bg-raised" style={{ borderLeft: '3px solid #D4A847' }}>
                 <p className="font-sans text-xs text-warm leading-relaxed">
-                  For business partnerships, IT consultancy scoping, or media enquiries, please include your company name and a brief description of your requirements.
+                  For order-related enquiries, please include your Amazon order number so we can assist you faster. For wholesale or bulk requests, let us know the products and quantities you have in mind.
                 </p>
               </div>
             </div>

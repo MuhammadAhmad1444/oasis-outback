@@ -40,10 +40,10 @@ export default function Navbar() {
             {/* Logo */}
             <Link to="/" className="flex items-baseline gap-1 group" onClick={() => setOpen(false)}>
               <span className="font-serif italic text-xl text-cream tracking-tight group-hover:text-gold-light transition-colors duration-300">
-                Chic
+                Oasis
               </span>
               <span className="font-sans font-light text-lg text-muted tracking-[0.18em] group-hover:text-warm transition-colors duration-300">
-                CUB
+                OUTBACK
               </span>
             </Link>
 

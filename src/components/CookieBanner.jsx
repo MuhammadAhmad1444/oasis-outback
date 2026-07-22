@@ -5,14 +5,14 @@ export default function CookieBanner() {
   const [show, setShow] = useState(false)
 
   useEffect(() => {
-    if (!localStorage.getItem('chiccub_cookie_consent')) {
+    if (!localStorage.getItem('oasisoutback_cookie_consent')) {
       const t = setTimeout(() => setShow(true), 1500)
       return () => clearTimeout(t)
     }
   }, [])
 
-  const accept  = () => { localStorage.setItem('chiccub_cookie_consent', 'accepted');       setShow(false) }
-  const decline = () => { localStorage.setItem('chiccub_cookie_consent', 'essential_only'); setShow(false) }
+  const accept  = () => { localStorage.setItem('oasisoutback_cookie_consent', 'accepted');       setShow(false) }
+  const decline = () => { localStorage.setItem('oasisoutback_cookie_consent', 'essential_only'); setShow(false) }
 
   if (!show) return null
 

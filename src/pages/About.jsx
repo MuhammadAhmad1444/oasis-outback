@@ -1,25 +1,26 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Code2, ShoppingBag, Shield, Globe, Award, Briefcase } from 'lucide-react'
+import { ArrowRight, Sparkles, ShieldCheck, Truck, Award, Tag, Package, Headphones } from 'lucide-react'
+import { COMPANY } from '../data/company'
 
 const values = [
-  { icon: Shield,   title: 'Compliance First',       desc: 'Every operation is designed around UK corporate law, GDPR, and financial regulation.' },
-  { icon: Globe,    title: 'Global Perspective',     desc: 'We serve clients across multiple jurisdictions while maintaining rigorous UK governance.' },
-  { icon: Code2,    title: 'Proprietary Technology', desc: 'Our IT consultancy expertise directly powers our own retail platform.' },
-  { icon: Award,    title: 'Transparent Operations', desc: 'Full disclosure of business structure, corporate information, and legal standing at all times.' },
+  { icon: Award,       title: 'Quality First',                        desc: 'Every product is chosen for dependable, everyday quality — no filler, no gimmicks.' },
+  { icon: Tag,         title: 'Fair, Transparent Pricing',            desc: 'Honest A$ pricing on every listing, with no hidden costs at checkout.' },
+  { icon: Truck,       title: 'Fast Australia-Wide Delivery',         desc: 'Orders shipped promptly to homes right across Australia via reliable fulfilment.' },
+  { icon: ShieldCheck, title: 'Customer Care & Consumer Guarantees',  desc: 'Backed by your rights under the Australian Consumer Law and attentive local support.' },
 ]
 
 const pillars = [
-  { icon: Code2,        label: 'Proprietary Platform',  desc: 'Built entirely in-house using our own engineering expertise — no third-party platforms.' },
-  { icon: ShoppingBag,  label: 'Direct-to-Consumer',    desc: 'No intermediaries. Products move from quality-assured suppliers to customers efficiently.' },
-  { icon: Briefcase,    label: 'Enterprise Discipline', desc: 'Retail operations governed by the same rigour as our B2B consultancy engagements.' },
+  { icon: Sparkles,   label: 'Curated Selection',                        desc: 'A hand-picked range across home, garden, lighting, automotive, electronics and lifestyle — quality over quantity.' },
+  { icon: Package,    label: 'Amazon-Backed Fulfilment & Secure Checkout', desc: 'We sell through Amazon Australia, so you get trusted secure checkout, buyer protection and reliable delivery.' },
+  { icon: Headphones, label: 'Australian Customer Support',              desc: 'Operated locally from Forest Hill, Victoria — real help from a team that knows Australian shoppers.' },
 ]
 
-const corporate = [
-  ['Company Name',      'Chic Cub Ltd'],
-  ['Registered in',     'England and Wales'],
-  ['Registered Office', 'Office 1307, 60 Tottenham Court Road, Fitzrovia, London, W1T 2EW'],
-  ['Company Number',    '[COMPANY_NUMBER]'],
-  ['Email',             'support@chiccub.com'],
+const business = [
+  ['Trading Name',  COMPANY.name],
+  ['Proprietor',    COMPANY.proprietor],
+  ['Business Type', 'Online Retail'],
+  ['Location',      `${COMPANY.suburb}, ${COMPANY.country}`],
+  ['Email',         COMPANY.email],
 ]
 
 export default function About() {
@@ -38,7 +39,7 @@ export default function About() {
           </h1>
           <div className="w-10 h-px bg-gold mb-7" />
           <p className="font-sans text-base text-warm leading-[1.8] max-w-2xl">
-            A UK-registered technology and retail company, built on transparency, technical excellence, and commercial integrity.
+            Oasis Outback is a Melbourne-based online retailer offering quality, affordable products across many categories, delivered Australia-wide.
           </p>
         </div>
       </section>
@@ -51,20 +52,20 @@ export default function About() {
             <div>
               <h2 className="font-serif font-light text-3xl text-cream mb-7">Our Mission</h2>
               <p className="font-sans text-sm text-warm leading-[1.9] mb-5">
-                Chic Cub was founded with a singular vision: to demonstrate that enterprise-grade technology and world-class retail operations are not mutually exclusive. We exist at the intersection of two disciplines — IT consultancy and direct-to-consumer commerce — and use each to strengthen the other.
+                Oasis Outback was founded on a simple idea: dependable everyday products should be easy to find and easy to trust. We curate a considered range spanning home, garden, automotive, lighting, electronics and lifestyle — the practical things that make daily life run a little more smoothly.
               </p>
               <p className="font-sans text-sm text-warm leading-[1.9] mb-5">
-                Our consultancy division builds scalable web infrastructure, bespoke software systems, and digital transformation programmes for international clients. This expertise powers our own e-commerce platform — giving us a living proof-of-concept for everything we recommend.
+                We sell through Amazon Australia, giving every customer secure checkout, buyer protection and reliable fulfilment they already know and trust. It lets us focus on what we do best — choosing good products and standing behind them.
               </p>
               <p className="font-sans text-sm text-warm leading-[1.9] mb-10">
-                We are registered in England and Wales, operate from our Fitzrovia, London headquarters, and conduct all business in full compliance with UK corporate law, the Data Protection Act 2018, and UK Consumer Contracts Regulations 2013.
+                The store is owned and operated by {COMPANY.proprietor} from {COMPANY.region}, and we conduct all business in full compliance with the Australian Consumer Law and the Privacy Act 1988.
               </p>
 
-              {/* Corporate info */}
+              {/* Business info */}
               <div className="bg-raised border border-line p-6" style={{ borderLeft: '3px solid #D4A847' }}>
-                <h3 className="label text-muted mb-5">Corporate Information</h3>
+                <h3 className="label text-muted mb-5">Business Information</h3>
                 <div className="space-y-3">
-                  {corporate.map(([k, v]) => (
+                  {business.map(([k, v]) => (
                     <div key={k} className="flex gap-3">
                       <span className="font-sans text-xs font-medium text-cream w-36 flex-shrink-0">{k}:</span>
                       <span className="font-sans text-xs text-warm">{v}</span>
@@ -75,9 +76,9 @@ export default function About() {
             </div>
 
             <div>
-              <h2 className="font-serif font-light text-3xl text-cream mb-7">The Proprietary Advantage</h2>
+              <h2 className="font-serif font-light text-3xl text-cream mb-7">Why Shop With Us</h2>
               <p className="font-sans text-sm text-warm leading-[1.9] mb-10">
-                Most retail businesses rely on third-party platforms. Chic Cub is different. Our in-house technology team has built and maintains our entire e-commerce ecosystem — the same team that advises international companies on digital infrastructure.
+                Oasis Outback keeps things straightforward: a carefully chosen range, the security of a trusted marketplace, and local support behind every order. Here is what that means for you.
               </p>
               <div className="space-y-7">
                 {pillars.map(({ icon: Icon, label, desc }) => (
@@ -123,7 +124,7 @@ export default function About() {
       <section className="bg-surface border-t border-line py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-7">
           <p className="font-serif italic font-light text-xl text-cream">
-            "Want to know more about our operations?"
+            "Have a question about a product or your order?"
           </p>
           <Link to="/contact" className="flex-shrink-0 btn-primary">
             Get in Touch <ArrowRight size={15} />
