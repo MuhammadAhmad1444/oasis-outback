@@ -55,7 +55,7 @@ export default function ShippingPolicy() {
         If tracking shows your parcel as delivered but you have not received it, please check around your
         property and with neighbours first. If you still cannot locate it, or your parcel has not arrived
         within the estimated timeframe, contact us at{' '}
-        <a href="mailto:store@oasisoutback.com">store@oasisoutback.com</a> and we will help you follow it up
+        <a href="mailto:oasisoutback54@gmail.com">oasisoutback54@gmail.com</a> and we will help you follow it up
         with the carrier and Amazon.
       </p>
 
@@ -76,7 +76,7 @@ export default function ShippingPolicy() {
       <h2>8. Contact Us</h2>
       <p>
         For any shipping or delivery enquiries, contact us at{' '}
-        <a href="mailto:store@oasisoutback.com">store@oasisoutback.com</a> or call{' '}
+        <a href="mailto:oasisoutback54@gmail.com">oasisoutback54@gmail.com</a> or call{' '}
         <a href="tel:+61483982589">+61 483 982 589</a>.
       </p>
     </LegalPage>

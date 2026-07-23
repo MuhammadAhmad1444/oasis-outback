@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Services from './pages/Services'
 import Shop from './pages/Shop'
+import Cart from './pages/Cart'
 import Contact from './pages/Contact'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsOfService from './pages/TermsOfService'
@@ -32,6 +33,7 @@ export default function App() {
             <Route path="/about"            element={<About />} />
             <Route path="/services"         element={<Services />} />
             <Route path="/shop"             element={<Shop />} />
+            <Route path="/cart"             element={<Cart />} />
             <Route path="/contact"          element={<Contact />} />
             <Route path="/privacy-policy"   element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />

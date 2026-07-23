@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, ShoppingBag, Truck, ShieldCheck, RefreshCw, CreditCard, LifeBuoy, Package } from 'lucide-react'
-import { products } from '../data/products'
+import { listedProducts as products } from '../data/products'
 import ProductCard from '../components/ProductCard'
 
 const stats = [

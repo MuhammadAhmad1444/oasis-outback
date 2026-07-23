@@ -86,7 +86,7 @@ export default function CookiePolicy() {
       <h2>6. Contact Us</h2>
       <p>
         If you have any questions about our use of cookies, please contact us at{' '}
-        <a href="mailto:store@oasisoutback.com">store@oasisoutback.com</a> or write to:
+        <a href="mailto:oasisoutback54@gmail.com">oasisoutback54@gmail.com</a> or write to:
       </p>
       <ul>
         <li>Oasis Outback, 4 Longbrae Avenue, Forest Hill VIC 3131, Australia</li>

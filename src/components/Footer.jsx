@@ -6,6 +6,7 @@ const companyLinks = [
   { label: 'About Us',   path: '/about' },
   { label: 'Services',   path: '/services' },
   { label: 'Shop',       path: '/shop' },
+  { label: 'Cart',       path: '/cart' },
   { label: 'Contact Us', path: '/contact' },
 ]
 
@@ -50,6 +51,14 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <Mail size={12} className="text-gold flex-shrink-0" />
                 <a href={`mailto:${COMPANY.email}`} className="text-muted hover:text-cream transition-colors duration-200">{COMPANY.email}</a>
+                <span className="text-faint">·</span>
+                <span className="text-muted/70 text-xs">General</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail size={12} className="text-gold flex-shrink-0" />
+                <a href={`mailto:${COMPANY.emailOrders}`} className="text-muted hover:text-cream transition-colors duration-200">{COMPANY.emailOrders}</a>
+                <span className="text-faint">·</span>
+                <span className="text-muted/70 text-xs">Orders</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={12} className="text-gold flex-shrink-0" />

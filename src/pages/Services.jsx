@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Truck, CreditCard, ShieldCheck, LifeBuoy, PackageCheck } from 'lucide-react'
-import { products, groups, iconFor } from '../data/products'
+import { listedProducts as products, groups, iconFor } from '../data/products'
 
 const shopCategories = groups
   .filter(g => g !== 'All')

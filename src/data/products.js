@@ -68,43 +68,43 @@ export const products = [
   { asin: 'B0D9WN6NL2', group: 'Office',      badge: null,         price: 63.01,  shipping: 0,     name: '6 Rolls Thermal Paper 8.5 x 11 inch, US Letter Roll for M08f / M832 Portable Printer, Quick-Dry Inkless A4 Rolls' },
 ]
 
-// Attach a product-relevant photo to each item. Each keyword maps the product
-// to a matching category of photography, and the lock value keeps the same
-// photo showing on every visit. The card falls back to a branded category tile
-// if an image fails to load.
-// NOTE: these are representative photos — swap `p.img` for real product image
-// URLs (e.g. exported from Amazon Seller Central) when you have them.
-const imageKeyword = {
-  B087Z39XKF: 'light',      B0FBLXRCYL: 'lamp',       B0D964QTTS: 'lights',
-  B0C5D737ZS: 'lantern',    B0C5QMXBXZ: 'lantern',    B0D7HBF865: 'lights',
-  B0DCGBDKTM: 'lantern',    B09HSC7VNW: 'lamp',
-  B08Y8WPQJH: 'poster',     B0F9JWSKJN: 'laundry',    B0CRHF7H7M: 'vacuum',
-  B08Y8XRVQX: 'poster',     B0B9288GWJ: 'vacuum',
-  B0D2TLTX27: 'lawnmower',  B0BB55VS8K: 'garden',     B004SI9O9S: 'garden',
-  B0DRV356LC: 'barbecue',   B0DZX7Y3NC: 'chainsaw',   B0BXGZ9BR6: 'garden',
-  B0G2MSYSBK: 'hat',        B0B8DD4ZP1: 'car',        B0FKN68MDM: 'car',
-  B0CQQJJZZ4: 'car',        B0B777GZD9: 'car',        B0DYPFBGNF: 'car',
-  B0FBG7DP3W: 'citrus',     B0DNQ6QHDQ: 'kitchen',
-  B0DJ72NJM7: 'vacuum',     B0CB6MMLMR: 'vacuum',     B083TCNFZH: 'light',
-  B0FXWWFFVV: 'sprinkler',
-  B07KMDV1YJ: 'cards',      B0FHDDDJFX: 'boardgame',
-  B0GMH171D3: 'headphones', B0BYWML2LV: 'keyboard',   B0BYWMM424: 'keyboard',
-  B0FJXRJBTK: 'computer',   B0F1SRVTQF: 'microphone', B0DCSHGYYL: 'car',
-  B0BCG2DPG4: 'lighter',    B0D6BRPKCS: 'earphone',
-  B0CQHG1LJB: 'cat',
-  B0D9WN6NL2: 'paper',
+// ── Local product images ────────────────────────────────────────────
+// Photos live in "src/Picture Data/", named by ASIN (e.g. B087Z39XKF.jpg).
+// Vite bundles every image in that folder at build time. Each product is
+// matched to its photo by ASIN. To change a product's photo, replace its
+// file (keep the ASIN name). To ADD a product to the store, add its image;
+// to REMOVE it, delete the image — only products with an image are listed.
+const productImages = import.meta.glob(
+  '../Picture Data/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',
+  { eager: true, import: 'default' }
+)
+
+const imageByAsin = {}
+for (const path in productImages) {
+  const file = path.split('/').pop()               // e.g. "B087Z39XKF.jpg"
+  const asin = file.replace(/\.[^.]+$/, '').toUpperCase()  // strip extension, normalise ASIN
+  imageByAsin[asin] = productImages[path]
 }
 
-products.forEach((p, i) => {
-  const kw = imageKeyword[p.asin] || 'product'
-  p.img = `https://loremflickr.com/600/480/${kw}?lock=${i + 1}`
+// A product uses ONLY the image in this folder (matched by ASIN, any case).
+products.forEach((p) => {
+  p.img = imageByAsin[p.asin.toUpperCase()] || null
 })
 
-// Filter groups in display order (built from the catalogue above)
-export const groups = [
-  'All', 'Lighting', 'Home', 'Garden', 'Automotive', 'Kitchen',
+// Only products that have a local image are shown in the store.
+export const listedProducts = products.filter((p) => p.img)
+
+// Canonical category order; only categories that actually have listed
+// products become filter chips.
+const categoryOrder = [
+  'Lighting', 'Home', 'Garden', 'Automotive', 'Kitchen',
   'Tools & DIY', 'Toys & Games', 'Electronics', 'Health & Personal Care',
   'Pet Supplies', 'Office',
+]
+
+export const groups = [
+  'All',
+  ...categoryOrder.filter((g) => listedProducts.some((p) => p.group === g)),
 ]
 
 // Icon shown on each product's placeholder tile, keyed by group

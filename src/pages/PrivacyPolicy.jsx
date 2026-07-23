@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
         <li><strong>Business:</strong> Oasis Outback</li>
         <li><strong>Operated by:</strong> Muhammad Waqas</li>
         <li><strong>Address:</strong> 4 Longbrae Avenue, Forest Hill VIC 3131, Australia</li>
-        <li><strong>Email:</strong> <a href="mailto:store@oasisoutback.com">store@oasisoutback.com</a></li>
+        <li><strong>Email:</strong> <a href="mailto:oasisoutback54@gmail.com">oasisoutback54@gmail.com</a></li>
       </ul>
 
       <h2>2. What Personal Information We Collect</h2>
@@ -83,7 +83,7 @@ export default function PrivacyPolicy() {
       <p>
         You have the right to request access to the personal information we hold about you and to ask us to
         correct it if it is inaccurate, out of date, or incomplete. To make a request, contact us at{' '}
-        <a href="mailto:store@oasisoutback.com">store@oasisoutback.com</a>. We will respond within a reasonable
+        <a href="mailto:oasisoutback54@gmail.com">oasisoutback54@gmail.com</a>. We will respond within a reasonable
         period.
       </p>
 
@@ -96,7 +96,7 @@ export default function PrivacyPolicy() {
       <h2>10. Complaints</h2>
       <p>
         If you have a concern about how we have handled your personal information, please contact us first at{' '}
-        <a href="mailto:store@oasisoutback.com">store@oasisoutback.com</a> and we will do our best to resolve it.
+        <a href="mailto:oasisoutback54@gmail.com">oasisoutback54@gmail.com</a> and we will do our best to resolve it.
         If you are not satisfied with our response, you may lodge a complaint with the{' '}
         <strong>Office of the Australian Information Commissioner (OAIC)</strong> at{' '}
         <a href="https://www.oaic.gov.au" target="_blank" rel="noopener noreferrer">oaic.gov.au</a>.
@@ -110,7 +110,7 @@ export default function PrivacyPolicy() {
 
       <h2>12. Contact Us</h2>
       <ul>
-        <li><strong>Email:</strong> <a href="mailto:store@oasisoutback.com">store@oasisoutback.com</a></li>
+        <li><strong>Email:</strong> <a href="mailto:oasisoutback54@gmail.com">oasisoutback54@gmail.com</a></li>
         <li><strong>Post:</strong> Oasis Outback, 4 Longbrae Avenue, Forest Hill VIC 3131, Australia</li>
       </ul>
     </LegalPage>

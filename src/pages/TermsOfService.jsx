@@ -18,7 +18,7 @@ export default function TermsOfService() {
         <li><strong>Business:</strong> Oasis Outback</li>
         <li><strong>Operated by:</strong> Muhammad Waqas</li>
         <li><strong>Address:</strong> 4 Longbrae Avenue, Forest Hill VIC 3131, Australia</li>
-        <li><strong>Email:</strong> <a href="mailto:store@oasisoutback.com">store@oasisoutback.com</a></li>
+        <li><strong>Email:</strong> <a href="mailto:oasisoutback54@gmail.com">oasisoutback54@gmail.com</a></li>
         <li><strong>Telephone:</strong> +61 483 982 589</li>
       </ul>
 
@@ -102,7 +102,7 @@ export default function TermsOfService() {
       <h2>12. Contact</h2>
       <p>
         For any queries regarding these Terms of Service, please contact us at{' '}
-        <a href="mailto:store@oasisoutback.com">store@oasisoutback.com</a>.
+        <a href="mailto:oasisoutback54@gmail.com">oasisoutback54@gmail.com</a>.
       </p>
     </LegalPage>
   )

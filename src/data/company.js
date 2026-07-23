@@ -22,9 +22,10 @@ export const COMPANY = {
   addressFull:  '4 Longbrae Avenue, Forest Hill VIC 3131, Australia',
 
   // Contact
-  email:     'store@oasisoutback.com',
-  phone:     '+61 483 982 589',
-  phoneHref: 'tel:+61483982589',
+  email:       'oasisoutback54@gmail.com',      // general enquiries & support
+  emailOrders: 'buyings@oasisoutback.online', // orders & buying
+  phone:       '+61 483 982 589',
+  phoneHref:   'tel:+61483982589',
 
   // Marketplace
   marketplace:     'Amazon Australia',

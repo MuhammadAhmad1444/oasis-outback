@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { X, Menu } from 'lucide-react'
+import { X, Menu, ShoppingCart } from 'lucide-react'
+import { useCart } from '../context/CartContext'
 
 const navLinks = [
   { label: 'Home',     path: '/' },
@@ -13,6 +14,7 @@ const navLinks = [
 export default function Navbar() {
   const [open, setOpen]         = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const { count }               = useCart()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -73,21 +75,48 @@ export default function Navbar() {
                 </NavLink>
               ))}
               <Link
+                to="/cart"
+                className="relative text-warm hover:text-gold transition-colors duration-200"
+                aria-label={`Cart (${count} items)`}
+              >
+                <ShoppingCart size={18} />
+                {count > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-gold text-bg text-[10px] font-bold rounded-full min-w-[16px] h-4 px-1 flex items-center justify-center">
+                    {count}
+                  </span>
+                )}
+              </Link>
+              <Link
                 to="/contact"
-                className="ml-2 px-5 py-2 border border-gold/35 text-gold text-[13px] font-sans font-medium tracking-wide hover:bg-gold hover:text-bg transition-all duration-200"
+                className="ml-1 px-5 py-2 border border-gold/35 text-gold text-[13px] font-sans font-medium tracking-wide hover:bg-gold hover:text-bg transition-all duration-200"
               >
                 Get in Touch
               </Link>
             </div>
 
-            {/* Mobile toggle */}
-            <button
-              className="lg:hidden text-warm hover:text-gold p-1 z-[60] relative transition-colors duration-200"
-              onClick={() => setOpen(o => !o)}
-              aria-label="Toggle menu"
-            >
-              {open ? <X size={22} /> : <Menu size={22} />}
-            </button>
+            {/* Mobile: cart + toggle */}
+            <div className="lg:hidden flex items-center gap-5">
+              <Link
+                to="/cart"
+                onClick={() => setOpen(false)}
+                className="relative text-warm hover:text-gold z-[60] transition-colors duration-200"
+                aria-label={`Cart (${count} items)`}
+              >
+                <ShoppingCart size={20} />
+                {count > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-gold text-bg text-[10px] font-bold rounded-full min-w-[16px] h-4 px-1 flex items-center justify-center">
+                    {count}
+                  </span>
+                )}
+              </Link>
+              <button
+                className="text-warm hover:text-gold p-1 z-[60] relative transition-colors duration-200"
+                onClick={() => setOpen(o => !o)}
+                aria-label="Toggle menu"
+              >
+                {open ? <X size={22} /> : <Menu size={22} />}
+              </button>
+            </div>
           </div>
         </nav>
       </header>

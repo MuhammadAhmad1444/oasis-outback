@@ -41,7 +41,7 @@ export default function RefundPolicy() {
           and choose "Return or replace items".
         </li>
         <li>
-          <strong>Through us:</strong> email <a href="mailto:store@oasisoutback.com">store@oasisoutback.com</a>{' '}
+          <strong>Through us:</strong> email <a href="mailto:oasisoutback54@gmail.com">oasisoutback54@gmail.com</a>{' '}
           with your order number and a description of the issue (photos help for faulty items), and we will
           guide you through it.
         </li>
@@ -65,7 +65,7 @@ export default function RefundPolicy() {
       <h2>6. Faulty or Incorrect Items</h2>
       <p>
         If your item arrives faulty, damaged, or is not what you ordered, please contact us as soon as possible
-        at <a href="mailto:store@oasisoutback.com">store@oasisoutback.com</a>. You do not lose your rights
+        at <a href="mailto:oasisoutback54@gmail.com">oasisoutback54@gmail.com</a>. You do not lose your rights
         under the Australian Consumer Law if an item develops a fault.
       </p>
 
@@ -78,7 +78,7 @@ export default function RefundPolicy() {
       <h2>8. Contact Us</h2>
       <p>
         Questions about returns or refunds? Email{' '}
-        <a href="mailto:store@oasisoutback.com">store@oasisoutback.com</a> or call{' '}
+        <a href="mailto:oasisoutback54@gmail.com">oasisoutback54@gmail.com</a> or call{' '}
         <a href="tel:+61483982589">+61 483 982 589</a>.
       </p>
     </LegalPage>

@@ -18,9 +18,16 @@ const details = [
     icon: Mail,
     title: 'Email',
     content: (
-      <a href="mailto:store@oasisoutback.com" className="font-sans text-sm text-gold hover:underline mt-1.5 block">
-        store@oasisoutback.com
-      </a>
+      <div className="mt-1.5 space-y-1">
+        <a href="mailto:oasisoutback54@gmail.com" className="font-sans text-sm text-gold hover:underline block">
+          oasisoutback54@gmail.com
+        </a>
+        <span className="font-sans text-[11px] text-muted block">General enquiries &amp; support</span>
+        <a href="mailto:buyings@oasisoutback.online" className="font-sans text-sm text-gold hover:underline block pt-1">
+          buyings@oasisoutback.online
+        </a>
+        <span className="font-sans text-[11px] text-muted block">Orders &amp; buying</span>
+      </div>
     ),
   },
   {

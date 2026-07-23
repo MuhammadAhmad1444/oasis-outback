@@ -1,14 +1,13 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ShieldCheck, RefreshCw, Truck, ArrowRight, Mail } from 'lucide-react'
-import { products, groups } from '../data/products'
+import { ShieldCheck, RefreshCw, Truck, ArrowRight, Mail, ShoppingCart } from 'lucide-react'
+import { listedProducts as products, groups } from '../data/products'
 import ProductCard from '../components/ProductCard'
-import { COMPANY } from '../data/company'
 
 const policies = [
   { icon: Truck,       title: 'Delivered Australia-Wide',        body: 'Fast delivery to every state & territory',  link: '/shipping-policy' },
   { icon: RefreshCw,   title: 'Returns & Consumer Guarantees',   body: 'Protected under Australian Consumer Law',    link: '/refund-policy'   },
-  { icon: ShieldCheck, title: 'Secure Amazon Checkout',          body: 'Buyer protection on every order',           link: '/shipping-policy' },
+  { icon: ShieldCheck, title: 'Buy Direct or on Amazon',         body: 'Order via cart, or your Amazon account',    link: '/shipping-policy' },
 ]
 
 export default function Shop() {
@@ -30,9 +29,9 @@ export default function Shop() {
           </h1>
           <div className="w-10 h-px bg-gold mb-7" />
           <p className="font-sans text-base text-warm leading-[1.8] max-w-2xl">
-            Browse our full range across home, garden, automotive, lighting, electronics and more —
-            every item fulfilled through our Amazon Australia store with secure checkout and delivered
-            Australia-wide.
+            Browse our full range across home, garden, automotive, lighting, electronics and more.
+            Add items to your cart to <strong className="text-cream font-medium">buy directly from us</strong>,
+            or shop the same product on Amazon Australia — delivered Australia-wide.
           </p>
         </div>
       </section>
@@ -41,7 +40,7 @@ export default function Shop() {
       <div className="border-y border-gold/15 bg-gold/[0.06]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-3 text-center">
           <p className="font-sans text-sm text-warm">
-            <strong className="text-cream font-semibold">Fulfilled through Amazon Australia</strong>
+            <strong className="text-cream font-semibold">Buy direct from us or on Amazon Australia</strong>
             {' '}· Secure checkout &amp; buyer protection · Delivered Australia-wide
           </p>
         </div>
@@ -52,7 +51,7 @@ export default function Shop() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex flex-wrap justify-center gap-x-8 gap-y-1 font-sans text-[11px] text-muted tracking-wide">
           <span>Australian Online Retailer</span>
           <span>Australia-Wide Delivery</span>
-          <span>Secure Amazon Checkout</span>
+          <span>Buy Direct or on Amazon</span>
           <span>Backed by Australian Consumer Law</span>
         </div>
       </div>
@@ -92,18 +91,18 @@ export default function Shop() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
             <div>
-              <h3 className="font-serif font-light text-2xl text-cream mb-2">Interested in a product?</h3>
+              <h3 className="font-serif font-light text-2xl text-cream mb-2">Ready to order?</h3>
               <p className="font-sans text-sm text-warm">
-                Contact us with any questions about an item, availability, or your order.
+                Add items to your cart and check out directly with us, or contact us with any questions.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
-              <Link to="/contact" className="btn-primary">
+              <Link to="/cart" className="btn-primary">
+                <ShoppingCart size={14} /> View Cart
+              </Link>
+              <Link to="/contact" className="btn-outline">
                 <Mail size={14} /> Send an Enquiry
               </Link>
-              <a href={`mailto:${COMPANY.email}`} className="btn-outline">
-                {COMPANY.email}
-              </a>
             </div>
           </div>
         </div>
